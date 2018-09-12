@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" lang="en-us" content="events, manager, edmond, Sylar">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="UI/css/style.css">
+    <title>Fast-Food-Fast</title>
+  </head>
+  <!--The head ends here and body begins below  -->
+  <body>
+    <header>
+        <input type="text" name="search" placeholder="search or jump to...">
+        <!--right alignment begins here  -->
+        <div class="right-align">
+        <a href="index.html">  <input type="button" value="Login"> </a>
+        <input type="button" class="sign" value="SignUp" onclick="document.getElementById('id01').style.display='block'">
+
+          </div>
+
+    </header>
+    <!--The header end here  -->
+<div class="main">
+  <div class="login">
+    <!-- <form class="" action="" method="post"> -->
+    <form class="" action="home2.html" method="post">
+
+      <div class="">
+          <input type="text" placeholder="username" required>
+        </div>
+        <div class="">
+          <input type="password" placeholder="password" required>
+        </div>
+        <div class="" id="bodymovin">
+          <a href="home2.html"><input type="submit" value="login"></a>
+        </div>
+      </form>
+      <!-- <text>Not a Member yet? <a href="#">SignUp here.</a></text> -->
+      </div>
+<!-- </form> -->
+<h2><i class="fa fa-utensils"></i> Fast-Food-Fast</h2>
+<p>
+  Your order is always just <a href="#">one click </a>a head, login if you are registerd
+  or sign up below to enjoy our services.
+</p>
+
+<input type="button" class="sign" value="SignUp" onclick="document.getElementById('id01').style.display='block'">
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<form class="modal-content" action="#">
+  <div class="container">
+    <h2>SignUp below.</h2>
+    <hr>
+    <label for="first_name"><b>First Name:</b></label>
+    <input type="text" name="" placeholder="First name" required>
+    <label for="second_name"> <b>Second name:</b> </label>
+    <input type="text" name="" placeholder="Second name" required>
+
+    <label for="second_name"> <b>Email:</b> </label>
+    <input type="text" name="" placeholder="name@example.com" required>
+
+    <label for="second_name"> <b>Password:</b> </label>
+    <input type="password" name="" placeholder="Password" required>
+     <label for="remember">
+        <input type="checkbox" name="remember" checked="checked" value="">Remember me.
+     </label>
+     <div class="button-lower">
+       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+       <button type="submit" class="signupbtn">Sign Up</button>
+     </div>
+
+  </div>
+</form>
+</div>
+</div>
+<script>
+  var model = document.getElementById('id01');
+  window.onclick = function(event) {
+    if (event.target == model){
+      model.style.display = "none";
+    }
+  }
+</script>
+
+
+  </body>
+</html>
