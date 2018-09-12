@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  color: #FF7F50;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+
+}
+
+.navbar a:hover {
+  transition: 1s;
+  color: #FF7F50;
+  border-bottom: 2px solid #FF7F50;
+}
+
+.navbar .active {
+  border-bottom: 2px solid #FF7F50;
+}
+
+.navbar input[type=text]{
+  float: right;
+  margin-right: 20px;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  width: 250px;
+  background-color: rgb(68, 71, 76);
+  border-radius: 2px;
+  transition: .90s;
+
+
+}
+.navbar input[type=text]:focus {
+  width: 300px;
+  transition: .90s;
+  padding-left: 15px;
+  outline-color: #FF7F50;
+}
+#acc{
+  float: right;
+  color: #FF7F50;
+  margin-right: 10px;
+  margin-top: 13px;
+  display: block;
+}
+
+.main {
+  margin-top: 55px;
+}
