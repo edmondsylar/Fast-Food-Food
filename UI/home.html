@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/home2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+        <a href="#add_item"><text> <i class="fa fa-fort-awesome-alt"> Fast-Food-Fast - Admin Panel</i></text></a>
+
+        <i class="fa fa-cogs" id="acc"> Account settings</i>
+        <input type="text" name="search" placeholder="Search or jump to.....">
+        </div>
+
+      </div>
+    </header>
+    <!-- This is the side bar with user information -->
+    <nav class="sidenav">
+      <div class="sidenav-content">
+        <img src="https://i.pinimg.com/originals/e6/96/8b/e6968be467a102c45dea3117a43f82fd.jpg" alt="">
+        <br><label for="name"><b>user:</b></label> Admin <br>
+        <label for="email"><b>email:</b></label> admin@email.com <br>
+        <label for="number"><b>Contact:</b></label> +256 701207194 <br>
+
+        <!-- <button type="button" class="logout" name="button">logout</button> -->
+        <button type="" name="button" class="logout" onclick="Qnlog()"><a href="#"><i class="fa fa-sign-out-alt"> logout</i></a></button>
+        <script type="text/javascript">
+          function Qnlog() {
+            var rslt;
+            var r = confirm('Please confirm');
+            if (r == true) {
+              window.location.replace("../index.html");
+            }else {
+              window.location.replace("home.html");
+            }
+          }
+        </script>
+      </div>
+    </nav>
+<!-- This is the end of the side bar -->
+
+<!-- Begining of main body -->
+<div class="main">
+  <div class="main-content">
+    <table>
+  <tr>
+    <th>Food Order</th>
+    <th>Made By</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td> Pork </td>
+    <td>Edmond Musiitwa</td>
+    <td class="btns">
+        <input type="button" name="" value="Accept" class="accept" id="orde" onclick="accept()">
+        <input type="button" name="" value="Decline" class="Decline" onclick="decline()">
+    </td>
+  </tr>
+  <tr>
+    <td>Fish</td>
+    <td>Sylar Salvatore</td>
+    <td class="btns">
+      <input type="button" name="" value="Accept" class="accept">
+      <input type="button" name="" value="Decline" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>Katogo</td>
+    <td>Isac seguge</td>
+    <td class="btns">
+      <input type="button" name="" value="Accept" class="accept">
+      <input type="button" name="" value="Decline" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>Posho and Gnuts</td>
+    <td>Helen Kyabagu</td>
+    <td class="btns">
+      <input type="button" name="" value="Accept" class="accept">
+      <input type="button" name="" value="Decline" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>Spaghetti</td>
+    <td>Nsubuga Denise</td>
+    <td class="btns">
+      <input type="button" name="" value="Accept" class="accept">
+      <input type="button" name="" value="Decline" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>Matooke and Liver</td>
+    <td>Namusiitwa Stella</td>
+    <td class="btns">
+      <input type="button" name="" value="Accept" class="accept">
+      <input type="button" name="" value="Decline" class="Decline">
+    </td>
+  </tr>
+</table>
+
+  <div class="hist">
+      <h2>Manage Items</h2>
+  </div>
+  <div class="add-btn">
+    <button type="submit" name="button"> <i class="fa fa-plus-circle"> Add Item</i> </button>
+  </div>
+  <div class="lower">
+    <table>
+  <tr>
+    <th>id</th>
+    <th>Food Type</th>
+    <th>prices</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>001 </td>
+    <td>Beef</td>
+    <td>5000@</td>
+    <td class="btns">
+        <input type="button" name="" value="Edit" class="accept">
+        <input type="button" name="" value="Delete" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>002</td>
+    <td>Fish</td>
+    <td>15000@</td>
+    <td class="btns">
+      <input type="button" name="" value="Edit" class="accept">
+      <input type="button" name="" value="Delete" class="Decline">
+    </td>
+  </tr>
+  <tr>
+    <td>003</td>
+    <td>Katogo</td>
+    <td>2500@</td>
+    <td class="btns">
+      <input type="button" name="" value="Edit" class="accept">
+      <input type="button" name="" value="Delete" class="Decline">
+    </td>
+  </tr>
+  </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  function accept(){
+    var msg;
+    var opt = confirm('Accept order');
+    if (opt == true){
+      msg = "Accepted"
+    }else {
+      //do nothing
+    }
+    document.getElementById('orde').value = msg;
+  }
+</script>
+
+
+  </body>
+</html>
