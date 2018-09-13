@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/home2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  </head>
+  <body onload="welcome()">
+    <header>
+      <div class="navbar">
+        <a href="#home" class="active"><i class="fa fa-home"></i> Home</a>
+        <a href="#add_item"><text> <i class="fa fa-utensils"> Fast-Food-Fast</i></text></a>
+        <!-- <a href="#Orders"><i class="fa fa-bars"></i> Orders</a>
+        <a href="#Approved_orders"><i class="fa fa-"></i> Approved Orders</a> -->
+
+        <i class="fa fa-cogs" id="acc"> Account settings</i>
+        <input type="text" name="search" placeholder="Search or jump to.....">
+        </div>
+
+      </div>
+    </header>
+    <!-- This is the side bar with user information -->
+    <nav class="sidenav">
+      <div class="sidenav-content">
+        <img src="https://i.pinimg.com/originals/e6/96/8b/e6968be467a102c45dea3117a43f82fd.jpg" alt="">
+        <br><label for="name"><b>user:</b></label> username <br>
+        <label for="email"><b>email:</b></label> user@email.com <br>
+        <label for="number"><b>Contact:</b></label> +256 704 202 393 <br>
+
+
+        <!-- <button type="button" class="logout" name="button">logout</button> -->
+        <button type="" name="button" class="logout" onclick="Qnlog()"><a href="#"><i class="fa fa-sign-out-alt"> logout</i></a></button>
+        <script type="text/javascript">
+          function Qnlog() {
+            // var rslt
+            var r = confirm('Please confirm');
+            if (r == true) {
+              window.location.replace("../index.html");
+            }else {
+              window.location.replace("user.html");
+            }
+          }
+        </script>
+
+      </div>
+    </nav>
+
+
+
+<!-- This is the end of the side bar -->
+
+<!-- Begining of main body -->
+<div class="main">
+  <div class="main-content">
+
+    <table>
+  <tr>
+    <th>Food Order</th>
+    <th>Date</th>
+    <th>Completed</th>
+  </tr>
+  <tr>
+    <td> Pork </td>
+    <td>12-08-2019</td>
+    <td class="btns">
+        <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+  <tr>
+    <td>Fish</td>
+    <td>12-08-2018</td>
+    <td class="btns">
+      <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+  <tr>
+    <td>Katogo</td>
+    <td>1-09-2018</td>
+    <td class="btns">
+      <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+  <tr>
+    <td>Posho and Gnuts</td>
+    <td>02-10-2017</td>
+    <td class="btns">
+      <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+  <tr>
+    <td>Spaghetti</td>
+    <td>12-12-2015</td>
+    <td class="btns">
+      <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+  <tr>
+    <td>Matooke and Liver</td>
+    <td>12-12-2012</td>
+    <td class="btns">
+      <input type="button" name="" value="Done" class="Decline" onclick="alert('This order was completed.')">
+    </td>
+  </tr>
+</table>
+
+  <div class="hist">
+      <h2>View and make orders below</h2>
+  </div>
+  <div class="add-btn">
+    <button type="submit" name="button"> <i class="fa fa-plus-circle"> Create custom order here</i> </button>
+  </div>
+  <div class="lower">
+    <table>
+  <tr>
+    <th>id</th>
+    <th>Food Type</th>
+    <th>prices</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>001 </td>
+    <td>Beef</td>
+    <td>5000@</td>
+    <td class="btns">
+        <input type="button" name="" value="View" class="accept">
+        <input type="button" name="" value="Order" id="demo"class="Decline" onclick="changer()">
+    </td>
+  </tr>
+  <tr>
+    <td>002</td>
+    <td>Fish</td>
+    <td>15000@</td>
+    <td class="btns">
+      <input type="button" name="" value="View" class="accept">
+      <input type="button" name="" value="Order" id="demo"class="Decline" onclick="changer()">
+    </td>
+  </tr>
+  <tr>
+    <td>003</td>
+    <td>Katogo</td>
+    <td>2500@</td>
+    <td class="btns">
+      <input type="button" name="" value="View" class="accept">
+      <input type="button" name="" value="Order" id="demo"class="Decline" onclick="changer()">
+    </td>
+  </tr>
+  <tr>
+    <td>004</td>
+    <td>Chicken</td>
+    <td>25000@</td>
+    <td class="btns">
+      <input type="button" name="" value="View" class="accept">
+      <input type="button" name="" value="Order" id="demo"class="Decline" onclick="changer()">
+    </td>
+  </tr>
+  </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+  function changer() {
+    var msg;
+    var opt = confirm("Confirm order?");
+    if (opt == true){
+      msg = "Pending"
+    }else {
+      msg = "Canceled"
+    }
+    document.getElementById("demo").value = msg;
+  }
+  function welcome() {
+    alert('WELCOME TO FAST-FOOD-FAST');
+  }
+
+</script>
+
+  </body>
+</html>
