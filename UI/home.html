@@ -106,7 +106,33 @@
       <h2>Manage Items</h2>
   </div>
   <div class="add-btn">
-    <button type="submit" name="button"> <i class="fa fa-plus-circle"> Add Item</i> </button>
+    <button type="submit" name="button" id="myBtn"> <i class="fa fa-plus-circle"> Add Item</i> </button>
+    <div id="myModal" class="modal">
+  <!-- Item addition content -->
+      <div class="modal-content">
+          <span class="close">&times;</span>
+            <h2>CREATE ITEMS</h2>
+            <table>
+              <tr>
+                <td>id</td>
+                <td>Food Type</td>
+                <td>Price</td>
+              </tr>
+              <tr class="ask">
+                <td> <input type="text" name="" value=""> </td>
+                <td> <input type="text" name="" value=""> </td>
+                <td> <input type="text" name="" value=""> </td>
+              </tr>
+              <tr class="sub">
+                <td> <input type="submit" name="" value="cancel" class="accept"> </td>
+                <td><text>property of fast-food-fast @2018</td>
+                <td> <input type="submit" name="" value="Create" class="Decline"> </td>
+              </tr>
+            </table>
+        </div>
+
+    </div>
+
   </div>
   <div class="lower">
     <table>
@@ -159,6 +185,31 @@
     }
     document.getElementById('orde').value = msg;
   }
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
 </script>
 
 
