@@ -1,0 +1,342 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a{
+  float: left;
+  display: block;
+  color: #FF7F50;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+
+}
+
+.navbar a:hover {
+  transition: 1s;
+  color: #FF7F50;
+  border-bottom: 2px solid #FF7F50;
+}
+
+.navbar .active {
+  border-bottom: 2px solid #FF7F50;
+}
+
+.navbar input[type=text]{
+  float: right;
+  margin-right: 20px;
+  border: none;
+  padding: 5px;
+  margin-top: 10px;
+  width: 250px;
+  background-color: rgb(68, 71, 76);
+  border-radius: 2px;
+  transition: .90s;
+
+
+}
+.navbar input[type=text]:focus {
+  width: 300px;
+  transition: .90s;
+  padding-left: 15px;
+  outline-color: #FF7F50;
+}
+#acc{
+  float: right;
+  color: #FF7F50;
+  margin-right: 10px;
+  margin-top: 13px;
+  display: block;
+}
+.sidenav {
+  height: 110%;
+  width: 210px;
+  position: fixed;
+  z-index: -1;
+  margin: 0;
+  margin-top: -10px;
+  left: 0;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.sidenav-content {
+  /* padding: 10px; */
+  margin-top: 20px;
+  margin-left: 10px;
+  color: whitesmoke;
+}
+
+.sidenav-content img {
+  border-radius: 50%;
+  width: 150px;
+  height: 160px;
+  margin-bottom: 10px;
+}
+
+.sidenav-content label {
+  color: #FF7F50;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.sidenav-content a {
+  text-decoration: none;
+  color: #111;
+  display: block;
+}
+.sidenav-content .logout:hover{
+  background-color: #FF7F60;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  font-size: 15px;
+  }
+
+.sidenav-content button {
+  width: 105%;
+  margin-top: 25px;
+  background: none;
+  border: none;
+  padding: 16px;
+  text-align: center;
+  background-color: #FF7F50;
+  margin-left: -10px;
+}
+
+.sidenav-content button:hover {
+  background-color: #FF7F60;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  font-size: 15px;
+}
+
+.sidenav-content button:focus {
+  outline: none;
+}
+
+.main {
+  margin-top: 55px;
+  margin-left: 220px;
+}
+
+.main .main-content {
+  padding: 10px;
+}
+table {
+    font-family: arial, sans-serif;
+    transition: .90s;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+  background-color: #111;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  color: #FF7F50;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(0, 193, 79);
+}
+
+tr{
+  font-weight: lighter;
+  font-family: sans-serif;
+}
+
+tr:hover {
+  transition: .20s;
+  border: 1px solid #FF7F50;
+  background-color: #FF7F50;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+td input[type=button] {
+  width: 49%;
+  padding: 5px;
+  /* border-radius: 50% */
+  border: none;
+
+}
+.btns {
+  background-color: whitesmoke;
+  border: none;
+}
+
+.btns:hover{
+
+}
+.Decline:hover, .accept:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: whitesmoke;
+  border: none;
+}
+/* .accept:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: whitesmoke;
+
+} */
+
+.Decline {
+  background-color: #f44336;
+  font-weight: bold;
+}
+.Decline:focus, .accept:focus {
+  outline: none;
+}
+
+.accept {
+  background-color: #4CAF50;
+  font-weight: bold;
+}
+
+hr.divider {
+  border: 1.5px solid #FF7F50;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.hist {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 82%;
+  position: absolute;
+  color: #FF7F50;
+  padding:2px;
+  background-color: #111;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.add-btn {
+  width: 82.3%;
+  margin-top: 100px;
+  position: absolute;
+
+}
+
+
+.navbar text{
+  /* font-size: 19px; */
+  color: #FF7F50;
+  /* color: whitesmoke; */
+}
+
+
+.add-btn button {
+  width: 100%;
+  padding: 12px;
+  /* font-size: 15px; */
+  border: none;
+  background-color: #4CAF50;
+  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 2px 6px 20px 2px rgba(0, 0, 0, 0.19);
+}
+
+.add-btn button:hover{
+  transition: .50s;
+  font-size: 15px;
+}
+
+.add-btn button:focus{
+  outline-color: #FF7F50;
+}
+
+.lower{
+  margin-top: 155px;
+  position: absolute;
+  width: 82.3%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    opacity: .95;
+    background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    opacity: 1;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 2px 6px 20px 2px rgba(0, 0, 0, 0.19)
+}
+
+.modal-content h2{
+  text-align: center;
+  padding: 10px;
+  color: #FF7F50;
+  background-color: #111;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sub input[type=submit]{
+  width: 100%;
+  padding: 5px;
+  border: none;
+}
+.sub text {
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.sub {
+  text-align: center;
+}
+
+.ask input[type=text]{
+  width: 100%;
+  padding: none;
+}
+.ask input[type=text]:focus{
+  outline-color: green;
+}
