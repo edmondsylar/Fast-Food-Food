@@ -1,7 +1,7 @@
 # Fast-Food-fast
 
 [![Build Status](https://travis-ci.org/edmondsylar/Fast-Food-Food.svg?branch=API)](https://travis-ci.org/edmondsylar/Fast-Food-Food)
-[![Coverage Status](https://coveralls.io/repos/github/edmondsylar/Fast-Food-Food/badge.svg?branch=master)](https://coveralls.io/github/edmondsylar/Fast-Food-Food?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/edmondsylar/Fast-Food-Food/badge.svg?branch=API)](https://coveralls.io/github/edmondsylar/Fast-Food-Food?branch=API)
 
 fast-food-fast is a food delivery app for a restaurant designed to fullfill the following requiremets.
 ## 1. Users can create an account and log in
