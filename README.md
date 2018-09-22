@@ -42,4 +42,4 @@ To run this projectlocally you will need to have a few requirements installed an
 1. Python 
 Preferably python 2.7 and usually comes pre installed with all linux distros but in cases where it isnt, you can install it from terminal using the commmand.
 
-> ```` sudo apt-get install python2.7 ````
+> `` sudo apt-get install python2.7 ``
