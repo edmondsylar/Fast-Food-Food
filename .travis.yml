@@ -5,10 +5,10 @@ python:
 
 install:
   - pip install -r requirements.txt
+  - pip install .
 
 script:
-  # - cd API
-  - nosetests --with-coverage --cover-package=tests
+  - pytest
   
 after_success: 
   - coveralls
