@@ -28,18 +28,17 @@
   
 # API Endpoints
 
-|  Endpoints | Description  
+|  Method | Endpoint  | Description |
 | --- | :--- | ---: |
-| GET ALL  `/api/v1/get/orders`
-| GET ONE  `/api/v1/get/orders/id`
-| DEFAULT  `/api/v1/`
-| POST  `/api/v1/POST/orders`   
-| PUT  `/api/v1/PUT/orders/<orderId>`
+| GET | `/api/v1/get/orders`  | fetches all the orders.
+| GET | `/api/v1/get/orders/id`  | Gets an order with the specifide id.
+| GET | `/api/v1/`  | This is the default route returns a welcome message
+| POST | `/api/v1/POST/orders`   | Creates an order.
+| PUT | `//api/v1/PUT/orders/<orderId>`  | Update an order with the specified id.
 
 #Installation.
 To run this projectlocally you will need to have a few requirements installed and preferably a ***linux operating system.*** 
 
 1. Python 
 Preferably python 2.7 and usually comes pre installed with all linux distros but in cases where it isnt, you can install it from terminal using the commmand.
-``` sudo apt-get install python2.7
-```
+``` sudo apt-get install python2.7 ```
