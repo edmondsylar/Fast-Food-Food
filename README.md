@@ -1,5 +1,5 @@
 # Fast-Food-fast
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Build Status](https://travis-ci.org/edmondsylar/Fast-Food-Food.svg?branch=API)](https://travis-ci.org/edmondsylar/Fast-Food-Food)
 [![Coverage Status](https://coveralls.io/repos/github/edmondsylar/Fast-Food-Food/badge.svg?branch=API)](https://coveralls.io/github/edmondsylar/Fast-Food-Food?branch=API) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)  [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
