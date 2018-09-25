@@ -7,8 +7,7 @@ install:
   - pip install -r requirements.txt
 
 script:
-  # - cd API
-  -  pytest API/tests/ --cov=API/tests --cov-report term-missing
+  - pytest API/tests/ --cov=API/app/ --cov-report term-missing
   
 after_success: 
   - coveralls
