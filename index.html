@@ -16,9 +16,16 @@
         <input type="text" name="search" placeholder="search or jump to...">
         <!--right alignment begins here  -->
         <div class="right-align">
-        <a href="index.html"> <input type="button" value="Login"> </a>
+        <a href="#"> <input type="button" value="Login" onclick="log_prompt()"> </a>
         <input type="button" class="sign" value="SignUp" onclick="document.getElementById('id01').style.display='block'">
           </div>
+
+          <script>
+            function log_prompt(){
+              alert(' Please login below to continue')
+            }
+
+          </script>
 
     </header>
     <!--The header end here  -->
@@ -30,7 +37,7 @@
       <div class="">
           <input type="text" placeholder="username" required>
         </div>
-        <div class="">
+        <div class=""> 
           <input type="password" placeholder="password" required>
         </div>
         <div class="" id="bodymovin">
@@ -82,17 +89,17 @@
       model.style.display = "none";
     }
   }
-//
-//   function welcome(){
-//     alert('Welcome to Fast-Food-Fast \n Please login or register to continue')
-//     var trans;
-//     if (alert == true){
-//       trans = "block";
-//
-//     }
-//     document.getElementById('body_id').display = trans;
-//   }
-// </script>
+{% comment %} 
+   function welcome(){
+     alert('Welcome to Fast-Food-Fast \n Please login or register to continue')
+     var trans;
+     if (alert == true){
+       trans = "block";
+
+     }
+     document.getElementById('body_id').display = trans;
+   }
+ </script> {% endcomment %}
 
 
   </body>

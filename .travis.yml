@@ -1,0 +1,14 @@
+language: python
+
+python:
+  - 2.7.15
+
+install:
+  - pip install -r requirements.txt
+
+script:
+  # - cd API
+  -  pytest API/tests/ --cov=API/tests --cov-report term-missing
+  
+after_success: 
+  - coveralls
