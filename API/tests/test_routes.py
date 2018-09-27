@@ -20,7 +20,7 @@ class All_tests(unittest.TestCase):
 	            "by":"sample user",
 	            "status":"pending",
                 }
-        self.sample_data = {
+        self.done = {
             'by':'sample_user',
             'order':'fries only',
             'status':'done'
@@ -76,7 +76,7 @@ class All_tests(unittest.TestCase):
 
     def test_delete_cant_delete_data_not_existing(self):
         response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
-        response = self.my_test.delete('/api/v1/order/2', content_type='application/json')
+        response = self.my_test.delete('/api/v1/order/5', content_type='application/json')
         self.assertIn(b'error', response.data)
         self.assertTrue(response.status_code, 200)
 
@@ -84,3 +84,9 @@ class All_tests(unittest.TestCase):
         response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
         response = self.my_test.delete('/api/v1/order/2', content_type='application/json')
         self.assertIn(b'order deleted', response.data)
+
+    def test_cannot_update_done_order(self):
+        response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.done), content_type='application/json')
+        response = self.my_test.put('/api/v1/get/orders/2', data=json.dumps(self.updater), content_type='application/json')
+        self.assertIn(b'Somethong Went wrong!', response.data)
+
