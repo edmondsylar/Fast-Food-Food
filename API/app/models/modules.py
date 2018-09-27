@@ -44,9 +44,6 @@ class my_route_data:
         except IndexError:
             return jsonify({'error':'Somethong Went wrong!'}), 404
 
-        except UnboundLocalError:
-            return jsonify({'Error!(UnboundLocalError) ': 'Please check if you have any order with id {} or if your exists'.format(id)})
-
         
     def get_all_orders(self):
         return received_orders
