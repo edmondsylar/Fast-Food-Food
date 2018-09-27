@@ -20,6 +20,11 @@ class All_tests(unittest.TestCase):
 	            "by":"sample user",
 	            "status":"pending",
                 }
+        self.sample_data = {
+            'by':'sample_user',
+            'order':'fries only',
+            'status':'done'
+        }
             
         
       
@@ -64,8 +69,18 @@ class All_tests(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertIn(b'error', response.data)
         
-
     def test_update(self):
         response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
         response = self.my_test.put('/api/v1/get/orders/1', data=json.dumps(self.updater), content_type='application/json')
         self.assertTrue(b'The update was successfull' in response.data)
+
+    def test_delete_cant_delete_data_not_existing(self):
+        response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
+        response = self.my_test.delete('/api/v1/order/2', content_type='application/json')
+        self.assertIn(b'error', response.data)
+        self.assertTrue(response.status_code, 200)
+
+    def test_delete_works(self):
+        response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
+        response = self.my_test.delete('/api/v1/order/2', content_type='application/json')
+        self.assertIn(b'order deleted', response.data)
