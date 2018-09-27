@@ -16,7 +16,12 @@ class All_tests(unittest.TestCase):
         self.updater = {
             'status':'done'
         }
-        self.all_data = []
+        self.incomplete = {
+	            "by":"sample user",
+	            "status":"pending",
+                }
+            
+        
       
       
     def test_index(self):
@@ -27,10 +32,14 @@ class All_tests(unittest.TestCase):
         response = self.my_test.get('/api/v1/', content_type='application/json')
         self.assertTrue(b'WELCOME TO FAST FOODS FAST' in response.data)
 
-    def test_orders_added_to_order_list(self):
-        response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
-        response = self.all_data.append(self.sample_data)
-        self.assertNotEqual(self.all_data, [])
+    def test_post_method_invalid_input(self):
+        response = self.my_test.post('api/v1/post/orders', data=json.dumps(self.sample_data), content_type='text/plain')
+        self.assertTrue(b'TypeError', response.data)
+
+
+    def test_missing_values_in_post_method(self):
+        response = self.my_test.post('api/v1/post/orders', data=json.dumps(self.incomplete), content_type='application/json')
+        self.assertTrue(b'KeyErrr', response.data)
 
     def test_for_post_method_working(self):
         response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
@@ -48,6 +57,13 @@ class All_tests(unittest.TestCase):
     def test_get_all_endpoint(self):
         responce = self.my_test.get('/api/v1/get/orders', content_type='application/json')
         self.assertEqual(responce.status_code, 200)
+
+    def test_get_order_with_wrong_id(self):
+        response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
+        response = self.my_test.get('api/v1/get/orders/5', content_type='application/json')
+        self.assertEqual(response.status_code, 400)
+        self.assertIn(b'error', response.data)
+        
 
     def test_update(self):
         response = self.my_test.post('/api/v1/post/orders', data= json.dumps(self.sample_data), content_type='application/json')
