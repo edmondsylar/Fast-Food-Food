@@ -26,8 +26,8 @@ def update_order(id):
 
 @my_blueprint.route('/post/orders', methods = ['POST'])
 def create_order():
-    data.create_order()
-    return make_response(jsonify({'msg':'Order Created'}))
+    result = data.create_order()
+    return result
 
 @my_blueprint.route('/order/<int:id>', methods = ['DELETE'])
 def delete_order(id):
