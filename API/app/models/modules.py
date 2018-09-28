@@ -8,15 +8,24 @@ class my_route_data:
 
 # This creates a new order.
     def create_order(self):
-        order = {
+        by = request.json['by']
+        status = request.json['status']
+        order = request.json['order']
+        for i in by:
+            if i.isdigit():
+                return jsonify({'error':'something went wrong'})
+        else:
+            order = {
             'id':len(received_orders)+1,
-            'by':request.json['by'],
+            'by':by,
             'when':today,
             'status':request.json['status'],
             'order':request.json['order']
+            }
+            received_orders.append(order)
+            return jsonify({'success':'order created'})
 
-        }
-        received_orders.append(order)
+           
 
 
 # This gets an order by id.
